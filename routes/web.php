@@ -12,12 +12,12 @@
 */
 
  Route::get('/', function () {
-     return view('welcome');
- });
+      return view('welcome');
+  });
 
 Auth::routes(['verify'=>true]);
 
- Route::get('/home', 'HomeController@index')->name('home');
+//  Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/contact',function(){
 //     return view('public.contact');
@@ -29,5 +29,6 @@ Auth::routes(['verify'=>true]);
 
 Route::resource('contact','ContactController');
 Route::resource('sermon','SermonController');
+Route::resource('admin','AdminController');
 
 Route::resource('home','HomeController');

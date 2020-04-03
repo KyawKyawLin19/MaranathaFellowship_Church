@@ -61,7 +61,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{url('/home')}}">Home</a></li>
                                     
                                     <li><a href="events.html">Events</a></li>
                                     <li><a href="{{url('/sermon')}}">Sermons</a></li>
