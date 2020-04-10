@@ -65,7 +65,10 @@
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="single-latest-sermons mb-100">
                             <div class="sermons-thumbnail">
-                                <img src="{{$sermon->image}}" alt="">
+                                <img src="{{'/images/'.$sermon->image}}" alt="">
+                                <?php
+                                    print_r($sermon->image);
+                                ?>
                                 <!-- Date -->
                                 <div class="sermons-date">
                                     <h6><span>{{$sermon->day}}</span>{{$sermon->month}}</h6>

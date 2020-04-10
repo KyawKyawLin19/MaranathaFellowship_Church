@@ -125,7 +125,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="/receipe/create"><i class="fa fa-angle-double-right"></i>create new sermon</a></li>
+                                <li><a href="/sermon/create"><i class="fa fa-angle-double-right"></i>create new sermon</a></li>
                                 <li><a href="/receipe"><i class="fa fa-angle-double-right"></i>show all sermon</a></li>
                             </ul>
                         </li>
@@ -136,8 +136,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="/category/create"><i class="fa fa-angle-double-right"></i>contact detail</a></li>
-                                <!-- <li><a href="/category"><i class="fa fa-angle-double-right"></i>အမျိုးအစား အားလုံးပြရန်</a></li> -->
+                                <li><a href="/contact/update"><i class="fa fa-angle-double-right"></i>Create contact</a></li>
+                                <li><a href="/contact/detail"><i class="fa fa-angle-double-right"></i>Contact Details</a></li>
                             </ul>
                         </li>
                     </ul>

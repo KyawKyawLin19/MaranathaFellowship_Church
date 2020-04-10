@@ -9,72 +9,56 @@
                 <table class="table">
                     <tbody><tr>
                         <th style="width: 10px">#</th>
-                        <th>Task</th>
-                        <th>Progress</th>
-                        <th style="width: 40px">Label</th>
+                        <th>Title</th>
+                        <th>Data</th>
                     </tr>
                     <tr>
                         <td>1.</td>
                         <td>Address</td>
                         <td>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
+                            {{$contact->address}}
                         </td>
-                        <td><span class="badge bg-red">55%</span></td>
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>GOOGLE MAP Location</td>
+                        <td>G-mail</td>
                         <td>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                            </div>
+                            {{$contact->gmail}}
                         </td>
-                        <td><span class="badge bg-yellow">70%</span></td>
                     </tr>
                     <tr>
                         <td>3.</td>
-                        <td>G-mail</td>
+                        <td>Phone Number</td>
                         <td>
-                            <div class="progress xs progress-striped active">
-                                <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                            </div>
+                            {{$contact->ph_no}}
                         </td>
-                        <td><span class="badge bg-light-blue">30%</span></td>
                     </tr>
                     <tr>
                         <td>4.</td>
-                        <td>Phone Number</td>
+                        <td>Open Day and Time</td>
                         <td>
-                            <div class="progress xs progress-striped active">
-                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                            </div>
+                            {{$contact->opening_hours}}
                         </td>
-                        <td><span class="badge bg-green">90%</span></td>
                     </tr>
                     <tr>
                         <td>5.</td>
-                        <td>Open Day and Time</td>
+                        <td>City</td>
                         <td>
-                            <div class="progress xs progress-striped active">
-                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                            </div>
+                            {{$contact->city}}
                         </td>
-                        <td><span class="badge bg-green">90%</span></td>
                     </tr>
                     <tr>
                         <td>6.</td>
-                        <td>City</td>
+                        <td>Google Map Location</td>
                         <td>
-                            <div class="progress xs progress-striped active">
-                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                            </div>
+                            <textarea name="" id="" cols="30" rows="10" readonly>{{$contact->googlemap}}</textarea>
                         </td>
-                        <td><span class="badge bg-green">90%</span></td>
                     </tr>
                 </tbody></table>
             </div><!-- /.box-body -->
+            <div class="box-footer">
+                <a href="#" style="float:left;margin-right: 20px;"><button class="btn btn-primary">Edit</button></a>
+            </div>        
         </div><!-- /.box -->
     </div>
 @endsection
