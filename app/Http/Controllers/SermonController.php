@@ -14,7 +14,7 @@ class SermonController extends Controller
      */
     public function index()
     {
-        $sermons = Sermon::all();
+        $sermons = Sermon::Paginate('2');
         return view('public.sermons',compact('sermons'));
     }
 
@@ -25,7 +25,7 @@ class SermonController extends Controller
      */
     public function create()
     {
-        return view('sermon_create');
+        return view('sermons_create');
     }
 
     /**
@@ -59,7 +59,7 @@ class SermonController extends Controller
             'day' => $request->day,
             'month' => $request->month,
         ]);
-        return redirect('sermon/create')->with("message","Sermon Created Successfully!");
+        return redirect('admin')->with("message","Sermon Created Successfully!");
     }   
 
     /**
@@ -70,7 +70,8 @@ class SermonController extends Controller
      */
     public function show($id)
     {
-        return view('public.sermon_details');
+        $sermon = Sermon::find($id);
+        return view('public.sermon_details',compact('sermon'));
     }
 
     /**
@@ -81,7 +82,8 @@ class SermonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sermon = Sermon::find($id);
+        return view('sermons_update',compact('sermon'));
     }
 
     /**
@@ -93,7 +95,32 @@ class SermonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'pastor_name' => 'required',
+            'location' => 'required',
+            'sermon_name' => 'required',
+            'image' => 'required|image',
+            'video' => 'required',
+            'sermon_text' => 'required',
+            'day' => 'required',
+            'month' => 'required',
+        ]);
+
+        $imgName = uniqid().".".$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'),$imgName);
+
+        $sermon = Sermon::whereId($id)->update([
+            'pastor_name' => $request->pastor_name,
+            'location' => $request->location,
+            'sermon_name' => $request->sermon_name,
+            'image'=>$imgName,
+            'video' => $request->video,
+            'sermon_text' => $request->sermon_text,
+            'day' => $request->day,
+            'month' => $request->month,
+        ]);
+
+        return redirect('admin')->with("message","Sermon Updated Successfully!");
     }
 
     /**
@@ -104,6 +131,7 @@ class SermonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Sermon::whereId($id)->delete();
+        return redirect('admin')->with("message_delete","Sermon Deleted successfully!!!");
     }
 }

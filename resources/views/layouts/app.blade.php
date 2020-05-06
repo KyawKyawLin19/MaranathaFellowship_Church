@@ -13,6 +13,7 @@
     <link href="{{ asset('admincss/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
     <link href="{{ asset('admincss/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/regular.min.js">
     <!-- Ionicons -->
     <link href="{{ asset('admincss/ionicons.min.css') }}" rel="stylesheet" type="text/css" /> 
     <!-- bootstrap wysihtml5 - text editor -->
@@ -21,7 +22,7 @@
     <link href="{{ asset('admincss/AdminLTE.css') }}" rel="stylesheet">
 
 </head>
-<body class="skin-black">
+<body class="skin-blue">
     
     @guest
         <li class="nav-item">
@@ -56,7 +57,7 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="glyphicon glyphicon-user"></i>
+                                <i class="fa fa-user"></i>
                                 <span>{{ Auth::user()->name }} <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
@@ -120,24 +121,24 @@
                     <ul class="sidebar-menu">
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>sermons</span>
+                                <i class="fa fa-envelope"></i>
+                                <span>Sermons</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="/sermon/create"><i class="fa fa-angle-double-right"></i>create new sermon</a></li>
-                                <li><a href="/receipe"><i class="fa fa-angle-double-right"></i>show all sermon</a></li>
+                                <li><a href="/sermons/create"><i class="fa fa-angle-double-right"></i>Create new sermon</a></li>
+                                <li><a href="/admin"><i class="fa fa-angle-double-right"></i>Show all sermon</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-envelope"></i> 
-                                <span>contact</span>
+                                <span>News</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="/contact/update"><i class="fa fa-angle-double-right"></i>Create contact</a></li>
-                                <li><a href="/contact/detail"><i class="fa fa-angle-double-right"></i>Contact Details</a></li>
+                                <li><a href="/news/create"><i class="fa fa-angle-double-right"></i>Create News</a></li>
+                                <li><a href="/news/all"><i class="fa fa-angle-double-right"></i>News Details</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -146,7 +147,8 @@
             </aside>
 
             <aside class="right-side">
-                <section class="content" style="background: #222;min-height: 1190px;">
+                <section class="content">
+                <!-- style="min-height: 1190px;" -->
                     @yield('content')
                 </section>
             </aside>   

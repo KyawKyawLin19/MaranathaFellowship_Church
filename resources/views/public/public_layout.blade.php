@@ -43,7 +43,7 @@
                     <nav class="classy-navbar justify-content-between" id="croseNav">
 
                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="/home" class="nav-brand" style="font-family: Lato, Helvetica, sans-serif"> MaranthaFellowship Church</a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -62,10 +62,9 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="{{url('/home')}}">Home</a></li>
-                                    
-                                    <li><a href="events.html">Events</a></li>
-                                    <li><a href="{{url('/sermon')}}">Sermons</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="{{url('/sermons')}}">Sermons</a></li>
+                                    <li><a href="{{url('/news')}}">News</a></li>
+                                    <li><a href="{{url('/about')}}">About</a></li>
                                     <li><a href="{{url('/contact')}}">Contact</a></li>
                                 </ul>
                             </div>
@@ -109,7 +108,6 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70">
                             <a href="#" class="footer-logo"><img src="{{ asset('img/core-img/logo2.png') }}" class="img-thumbnail" alt="" style="width:200px;height:180px;"></a>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
                         </div>
                     </div>
 
@@ -119,14 +117,11 @@
                             <h5 class="widget-title">Quick Link</h5>
                             <nav class="footer-menu">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Home</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Event</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About Us</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Gallery</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sermons</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Blogs</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Donate</a></li>
+                                    <li><a href="{{url('/home')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Home</a></li>
+                                    <li><a href="{{url('/sermons')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sermons</a></li>
+                                    <li><a href="{{url('/news')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> News</a></li>
+                                    <li><a href="{{url('/about')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About</a></li>
+                                    <li><a href="{{url('/contact')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

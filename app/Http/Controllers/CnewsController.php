@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
+use App\Cnew;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class CnewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all()->first();
-        return view('public.contact',compact('contacts'));
+        return view('public.news');
     }
 
     /**
@@ -25,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('contact_create');
+        return view('news_create');
     }
 
     /**
@@ -42,10 +41,10 @@ class ContactController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cnew  $cnew
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Cnew $cnew)
     {
         //
     }
@@ -53,10 +52,10 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cnew  $cnew
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cnew $cnew)
     {
         //
     }
@@ -65,10 +64,10 @@ class ContactController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Cnew  $cnew
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cnew $cnew)
     {
         //
     }
@@ -76,11 +75,16 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Cnew  $cnew
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Cnew $cnew)
     {
         //
+    }
+
+    public function allNews(){
+        $news = Cnew::all();
+        return view('allnews',compact('news'));
     }
 }

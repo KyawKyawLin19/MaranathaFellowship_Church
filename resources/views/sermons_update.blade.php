@@ -23,26 +23,28 @@
 	    </div>
 		@endif
         <!-- form start -->
-        <form method="POST" action="/sermon" enctype="multipart/form-data">
-    	  {{ csrf_field() }}
+        <form method="POST" action="/sermons/{{$sermon->id}}" enctype="multipart/form-data">
+        {{ method_field("PATCH") }}
+        {{ csrf_field() }}
             <div class="box-body">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Pastor Name</label>
-                        <input type="text" class="form-control" name="pastor_name" placeholder="Enter Pastor Name" value="{{ old('pastor_name') }}" >
+                        <input type="text" class="form-control" name="pastor_name" placeholder="Enter Pastor Name" value="{{$sermon->pastor_name}}" >
                     </div>
                     <div class="form-group">
                         <label>Location</label>
-                        <input type="text" class="form-control" name="location" placeholder="Enter Location" value="{{ old('location') }}" >
+                        <input type="text" class="form-control" name="location" placeholder="Enter Location" value="{{$sermon->location}}" >
                     </div>
                     <div class="form-group">
                         <label>Sermon Name</label>
-                        <input type="text" class="form-control" name="sermon_name" placeholder="Enter Sermon Name" value="{{ old('sermon_name') }}" >
+                        <input type="text" class="form-control" name="sermon_name" placeholder="Enter Sermon Name" value="{{$sermon->sermon_name}}" >
                     </div>
                     <div class="form-group">
                         <label>Sermon Image</label>
                         <input type="file" name="image">
-                        <p class="help-block">Please Choose Sermon Image.</p>
+                        <img src="{{'/images/'.$sermon->image}}" width="150" height="150">
+                        <!-- <p class="help-block">Please Choose Sermon Image.</p> -->
                     </div>
                     
                 </div>
@@ -50,19 +52,20 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Youtube Video Link</label>
-                        <input type="text" class="form-control" name="video" placeholder="Enter Youtube Video Link" value="{{ old('video') }}">
+                        <input type="text" class="form-control" name="video" placeholder="Enter Youtube Video Link" value="{{$sermon->video}}">
                     </div>
                     <div class="form-group">
                         <label>Sermon Text</label>
-                        <textarea class="form-control" rows="4" name= "sermon_text" placeholder="Description ..." ></textarea>
+                        <textarea class="form-control" rows="4" name= "sermon_text">{{$sermon->sermon_text}}</textarea>
                     </div>
                     <div class="form-group">
                         <label>Day</label>
-                        <input type="text" class="form-control" name="day" placeholder="Enter Day 1 to 31" value="{{ old('day') }}">
+                        <input type="text" class="form-control" name="day" placeholder="Enter Day 1 to 31" value="{{$sermon->day}}">
                     </div>
                     <div class="form-group">
                         <label>Month</label>
                         <select class="form-control" name="month">
+                            <option value="{{$sermon->month}}" selected>Please Select</option>
                             <option value="Jan">Jan</option>
                             <option value="Feb">Feb</option>
                             <option value="Mar">Mar</option>
@@ -80,9 +83,17 @@
                 </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </form>
+        <div class="box-footer">
+        <form method="POST" action="/sermons/{{$sermon->id}}">
+                {{ method_field("DELETE") }}
+                {{ csrf_field() }}
+            <!-- <button type="submit">Delete</button> -->
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        </div>
     </div>
 </div>
 @endsection

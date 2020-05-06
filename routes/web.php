@@ -11,13 +11,15 @@
 |
 */
 
- Route::get('/', function () {
-      return view('welcome');
-  });
+//  Route::get('/', function () {
+//       return view('public.about');
+//   });
 
 Auth::routes(['verify'=>true]);
 
-//  Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/about', 'HomeController@aboutPage');
+Route::get('/contact', 'HomeController@contactPage');
+Route::get('/news/all', 'CnewsController@allNews');
 
 // Route::get('/contact',function(){
 //     return view('public.contact');
@@ -26,9 +28,8 @@ Auth::routes(['verify'=>true]);
 
 // Route::resource('admin','adminController');
 
-
-Route::resource('contact','ContactController');
-Route::resource('sermon','SermonController');
+Route::resource('sermons','SermonController');
+Route::resource('news','CnewsController');
 Route::resource('admin','AdminController');
 
 Route::resource('home','HomeController');

@@ -7,9 +7,8 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Sermons</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Sermons Details</li>
+                            <li class="breadcrumb-item"><a href="/sermons">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Sermon Details</li>
                         </ol>
                     </nav>
                 </div>
@@ -29,15 +28,15 @@
                         <!-- Sermons Details Area -->
                         <div class="single-post-details-area">
                             <div class="post-content">
-                                <h2 class="post-title mb-30">Start a New Way of Living</h2>
+                                <h2 class="post-title mb-30">{{ $sermon->sermon_name }}</h2>
                                 <div class="embed-responsive embed-responsive-21by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/idfY9-xQ9-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe class="embed-responsive-item" src="{{$sermon->video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <!-- Catagory & Share -->
                                 <div class="catagory-share-meta d-flex flex-wrap justify-content-between align-items-center">
                                     
                                 </div>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                                <p>{{ $sermon->sermon_text }}</p>
                                 <blockquote>
                                     <div class="blockquote-text">
                                         <h6>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.” </h6>
@@ -55,20 +54,20 @@
                     <div class="post-sidebar-area">
 
                         <!-- ##### Single Widget Area ##### -->
-                        <div class="single-widget-area">
+                        <!-- <div class="single-widget-area">
                             <div class="search-form">
                                 <form action="#" method="get">
                                     <input type="search" name="search" placeholder="Search Here">
                                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h6>Sermon News</h6>
+                                <h6>News</h6>
                             </div>
 
                             <!-- Single Latest Posts -->
@@ -128,10 +127,7 @@
                                 <h6>Sermon Speaker</h6>
                             </div>
                             <ol class="crose-catagories">
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Kyleigh Lam</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Thomas Jack</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Garry Rick</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> John Smith</a></li>
+                                <li><a href="#" class="disabled"><i class="fa fa-angle-right" aria-hidden="true"></i> Saw Patrick</a></li>
                             </ol>
                         </div>
 
@@ -142,29 +138,5 @@
     </div>
     <!-- ##### Sermons Area End ##### -->
 
-    <!-- ##### Subscribe Area Start ##### -->
-    <section class="subscribe-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Subscribe Text -->
-                <div class="col-12 col-lg-6">
-                    <div class="subscribe-text">
-                        <h3>Subscribe To Our Newsletter</h3>
-                        <h6>Subcribe Us And Tell Us About Your Story</h6>
-                    </div>
-                </div>
-                <!-- Subscribe Form -->
-                <div class="col-12 col-lg-6">
-                    <div class="subscribe-form text-right">
-                        <form action="#">
-                            <input type="email" name="subscribe-email" id="subscribeEmail" placeholder="Your Email">
-                            <button type="submit" class="btn crose-btn">subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Subscribe Area End ##### -->
 
 @endsection
