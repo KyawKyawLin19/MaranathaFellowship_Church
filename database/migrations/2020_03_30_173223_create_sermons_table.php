@@ -18,7 +18,6 @@ class CreateSermonsTable extends Migration
             $table->text('pastor_name');
             $table->text('location');
             $table->text('sermon_name');
-            $table->text('image');
             $table->text('video');
             $table->text('sermon_text');
             $table->timestamps();

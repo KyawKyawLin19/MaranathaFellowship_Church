@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i>Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">News</li>
                         </ol>
                     </nav>
@@ -42,9 +42,9 @@
                             <div class="events-text">
                                 <h4>{{$new->title}}</h4>
                                 <div class="events-meta">
-                                    <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{$new->date}}</a>
-                                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> {{$new->time}}</a>
-                                    <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Maranathafellowship Church</a>
+                                <i class="fa fa-calendar" aria-hidden="true" style="color:#c92f2f"></i><span style="font-size:14px;font-weight:400;font-style:italic;color:#959595;"> {{$new->date}}</span>
+                                <i class="fa fa-clock-o" aria-hidden="true" style="color:#c92f2f"></i><span style="font-size:14px;font-weight:400;font-style:italic;color:#959595;"> {{$new->time}}</span>
+                                <i class="fa fa-map-marker" aria-hidden="true" style="color:#c92f2f"></i><span style="font-size:14px;font-weight:400;font-style:italic;color:#959595;"> Maranathafellowship Church</span>
                                 </div>
                                 <p>{{$new->description}}</p>
                                 <!-- <a href="#">Read More <i class="fa fa-angle-double-right"></i></a> -->
@@ -56,6 +56,15 @@
                     </div>
                 </div>
             @endforeach
+                <div class="col-12" style="padding-top:30px;">
+                    <div class="pagination-area" style = "margin-bottom:50px;">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                {{$news->links()}}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

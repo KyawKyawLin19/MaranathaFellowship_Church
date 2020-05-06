@@ -23,7 +23,7 @@
 	    </div>
 		@endif
         <!-- form start -->
-        <form method="POST" action="/sermons" enctype="multipart/form-data">
+        <form method="POST" action="/sermons">
     	  {{ csrf_field() }}
             <div class="box-body">
                 <div class="col-md-6">
@@ -40,18 +40,12 @@
                         <input type="text" class="form-control" name="sermon_name" placeholder="Enter Sermon Name" value="{{ old('sermon_name') }}" >
                     </div>
                     <div class="form-group">
-                        <label>Sermon Image</label>
-                        <input type="file" name="image">
-                        <p class="help-block">Please Choose Sermon Image.</p>
-                    </div>
-                    
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
                         <label>Youtube Video Link</label>
                         <input type="text" class="form-control" name="video" placeholder="Enter Youtube Video Link" value="{{ old('video') }}">
                     </div>
+                </div>
+
+                <div class="col-md-6">
                     <div class="form-group">
                         <label>Sermon Text</label>
                         <textarea class="form-control" rows="4" name= "sermon_text" placeholder="Description ..." ></textarea>
@@ -79,8 +73,10 @@
                     </div>
                 </div>
             </div><!-- /.box-body -->
-            <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-md-12">
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </div>
         </form>
     </div>

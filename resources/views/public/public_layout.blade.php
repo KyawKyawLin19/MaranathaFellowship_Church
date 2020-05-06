@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Crose - Modern Church Template | Contact</title>
+    <title>MaranathaFellowship Church</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('img/core-img/favicon.ico') }}">
@@ -135,7 +135,7 @@
                             <!-- Single Latest News -->
                             <div class="single-latest-news">
                                 <p>ဝတ်ပြုကိုးကွယ်ခြင်း</p>
-                                <p><i class="fa fa-calendar" aria-hidden="true"></i> 3rd May 2020 Sunday</p>
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i> 3rd May 2020 Sunday    </p>
                             </div>
 
                             <!-- Single Latest News -->

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Sermon;
+use App\Cnew;
 use Illuminate\Http\Request;
 
 class SermonController extends Controller
@@ -14,7 +15,7 @@ class SermonController extends Controller
      */
     public function index()
     {
-        $sermons = Sermon::Paginate('2');
+        $sermons = Sermon::orderBy('created_at','desc')->paginate('9');
         return view('public.sermons',compact('sermons'));
     }
 
@@ -40,20 +41,18 @@ class SermonController extends Controller
             'pastor_name' => 'required',
             'location' => 'required',
             'sermon_name' => 'required',
-            'image' => 'required|image',
             'video' => 'required',
             'sermon_text' => 'required',
             'day' => 'required',
             'month' => 'required',
         ]);
-        $imgName = uniqid().".".$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'),$imgName);
+        // $imgName = uniqid().".".$request->image->getClientOriginalExtension();
+        // $request->image->move(public_path('images'),$imgName);
 
         $sermon = Sermon::create([
             'pastor_name' => $request->pastor_name,
             'location' => $request->location,
             'sermon_name' => $request->sermon_name,
-            'image'=>$imgName,
             'video' => $request->video,
             'sermon_text' => $request->sermon_text,
             'day' => $request->day,
@@ -71,7 +70,8 @@ class SermonController extends Controller
     public function show($id)
     {
         $sermon = Sermon::find($id);
-        return view('public.sermon_details',compact('sermon'));
+        $news = Cnew::orderBy('created_at','desc')->paginate(4);
+        return view('public.sermon_details',compact(['sermon','news']));
     }
 
     /**
@@ -99,21 +99,19 @@ class SermonController extends Controller
             'pastor_name' => 'required',
             'location' => 'required',
             'sermon_name' => 'required',
-            'image' => 'required|image',
             'video' => 'required',
             'sermon_text' => 'required',
             'day' => 'required',
             'month' => 'required',
         ]);
 
-        $imgName = uniqid().".".$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images'),$imgName);
+        // $imgName = uniqid().".".$request->image->getClientOriginalExtension();
+        // $request->image->move(public_path('images'),$imgName);
 
         $sermon = Sermon::whereId($id)->update([
             'pastor_name' => $request->pastor_name,
             'location' => $request->location,
             'sermon_name' => $request->sermon_name,
-            'image'=>$imgName,
             'video' => $request->video,
             'sermon_text' => $request->sermon_text,
             'day' => $request->day,

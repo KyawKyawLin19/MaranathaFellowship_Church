@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i>Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Sermons</li>
                         </ol>
                     </nav>
@@ -36,7 +36,7 @@
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="single-latest-sermons mb-100">
                             <div class="sermons-thumbnail">
-                                <img src="{{'/images/'.$sermon->image}}" alt="">
+                                <img src="/images/5e8e026a3c98e.jpg" alt="">
                                 <!-- Date -->
                                 <div class="sermons-date">
                                     <h6><span>{{$sermon->day}}</span>{{$sermon->month}}</h6>
@@ -60,14 +60,12 @@
                         </div>
                     </div>
                 @endforeach
+
                 <div class="col-12">
                     <div class="pagination-area" style = "margin-bottom:50px;">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+                                {{$sermons->links()}}
                             </ul>
                         </nav>
                     </div>

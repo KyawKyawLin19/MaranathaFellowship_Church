@@ -23,7 +23,7 @@
 	    </div>
 		@endif
         <!-- form start -->
-        <form method="POST" action="/sermons/{{$sermon->id}}" enctype="multipart/form-data">
+        <form method="POST" action="/sermons/{{$sermon->id}}">
         {{ method_field("PATCH") }}
         {{ csrf_field() }}
             <div class="box-body">
@@ -41,19 +41,12 @@
                         <input type="text" class="form-control" name="sermon_name" placeholder="Enter Sermon Name" value="{{$sermon->sermon_name}}" >
                     </div>
                     <div class="form-group">
-                        <label>Sermon Image</label>
-                        <input type="file" name="image">
-                        <img src="{{'/images/'.$sermon->image}}" width="150" height="150">
-                        <!-- <p class="help-block">Please Choose Sermon Image.</p> -->
-                    </div>
-                    
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
                         <label>Youtube Video Link</label>
                         <input type="text" class="form-control" name="video" placeholder="Enter Youtube Video Link" value="{{$sermon->video}}">
                     </div>
+                </div>
+
+                <div class="col-md-6">
                     <div class="form-group">
                         <label>Sermon Text</label>
                         <textarea class="form-control" rows="4" name= "sermon_text">{{$sermon->sermon_text}}</textarea>
@@ -82,17 +75,21 @@
                     </div>
                 </div>
             </div><!-- /.box-body -->
-            <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Update</button>
+            <div class="col-md-12">
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
             </div>
         </form>
-        <div class="box-footer">
-        <form method="POST" action="/sermons/{{$sermon->id}}">
-                {{ method_field("DELETE") }}
-                {{ csrf_field() }}
-            <!-- <button type="submit">Delete</button> -->
-            <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
+        <div class="col-md-12">
+            <div class="box-footer">
+            <form method="POST" action="/sermons/{{$sermon->id}}">
+                    {{ method_field("DELETE") }}
+                    {{ csrf_field() }}
+                <!-- <button type="submit">Delete</button> -->
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            </div>
         </div>
     </div>
 </div>

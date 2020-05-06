@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/sermons">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/sermons"><i class="fa fa-home"></i>Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Sermon Details</li>
                         </ol>
                     </nav>
@@ -18,7 +18,7 @@
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Sermons Area Start ##### -->
-    <div class="sermons-details-area section-padding-100">
+    <div class="sermons-details-area" style="padding-top:20px;">
         <div class="container">
             <div class="row justify-content-between">
                 <!-- Blog Posts Area -->
@@ -54,70 +54,24 @@
                     <div class="post-sidebar-area">
 
                         <!-- ##### Single Widget Area ##### -->
-                        <!-- <div class="single-widget-area">
-                            <div class="search-form">
-                                <form action="#" method="get">
-                                    <input type="search" name="search" placeholder="Search Here">
-                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-                        </div> -->
-
-                        <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
                                 <h6>News</h6>
                             </div>
-
+                        @foreach($news as $new)
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post">
-                                <a href="#" class="post-title">
-                                    <h6>Weekly meeting in companies...</h6>
-                                </a>
+                                <p>
+                                    <h6 style="font-weight: bold;color:#c92f2f;">{{$new->title}}</h6>
+                                <p>
                                 <div class="sermons-meta-data">
-                                    <p><i class="fa fa-user" aria-hidden="true"></i> Sermon From: <span>Jorge Malone</span></p>
-                                    <p><i class="fa fa-tag" aria-hidden="true"></i> Categories: <span>God, Pray</span></p>
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> March 10 on <span>9:00 am - 11:00 am</span></p>
+                                    <p><i class="fa fa-user" aria-hidden="true"></i> Sermon From: <span>{{$new->pastor_name}}</span></p>
+                                    <p><i class="fa fa-tag" aria-hidden="true"></i> Time: <span>{{$new->time}}</span></p>
+                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Date <span>{{$new->date}}</span></p>
                                 </div>
                             </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post">
-                                <a href="#" class="post-title">
-                                    <h6>Six important methods to...</h6>
-                                </a>
-                                <div class="sermons-meta-data">
-                                    <p><i class="fa fa-user" aria-hidden="true"></i> Sermon From: <span>Jorge Malone</span></p>
-                                    <p><i class="fa fa-tag" aria-hidden="true"></i> Categories: <span>God, Pray</span></p>
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> March 10 on <span>9:00 am - 11:00 am</span></p>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post">
-                                <a href="#" class="post-title">
-                                    <h6>New management method...</h6>
-                                </a>
-                                <div class="sermons-meta-data">
-                                    <p><i class="fa fa-user" aria-hidden="true"></i> Sermon From: <span>Jorge Malone</span></p>
-                                    <p><i class="fa fa-tag" aria-hidden="true"></i> Categories: <span>God, Pray</span></p>
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> March 10 on <span>9:00 am - 11:00 am</span></p>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post">
-                                <a href="#" class="post-title">
-                                    <h6>Seven ways to get ready for...</h6>
-                                </a>
-                                <div class="sermons-meta-data">
-                                    <p><i class="fa fa-user" aria-hidden="true"></i> Sermon From: <span>Jorge Malone</span></p>
-                                    <p><i class="fa fa-tag" aria-hidden="true"></i> Categories: <span>God, Pray</span></p>
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> March 10 on <span>9:00 am - 11:00 am</span></p>
-                                </div>
-                            </div>
-
+                        @endforeach
                         </div>
 
                         <!-- ##### Single Widget Area ##### -->
@@ -127,7 +81,7 @@
                                 <h6>Sermon Speaker</h6>
                             </div>
                             <ol class="crose-catagories">
-                                <li><a href="#" class="disabled"><i class="fa fa-angle-right" aria-hidden="true"></i> Saw Patrick</a></li>
+                                <li><p><i class="fa fa-user" aria-hidden="true" style="width:15px;color:#c92f2f;"></i> Saya Saw Patrick</p></li>
                             </ol>
                         </div>
 
@@ -137,6 +91,4 @@
         </div>
     </div>
     <!-- ##### Sermons Area End ##### -->
-
-
 @endsection

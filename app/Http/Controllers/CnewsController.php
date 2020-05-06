@@ -14,7 +14,7 @@ class CnewsController extends Controller
      */
     public function index()
     {
-        $news = Cnew::all();
+        $news = Cnew::orderBy('created_at','desc')->paginate(5);
         return view('public.news',compact('news'));
     }
 
