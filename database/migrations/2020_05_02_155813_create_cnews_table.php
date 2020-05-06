@@ -17,7 +17,7 @@ class CreateCnewsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('pastor_name');
-            $table->string('category');
+            $table->string('time');
             $table->string('date');
             $table->string('description');
             $table->timestamps();
