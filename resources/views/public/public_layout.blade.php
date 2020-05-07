@@ -43,7 +43,8 @@
                     <nav class="classy-navbar justify-content-between" id="croseNav">
 
                         <!-- Nav brand -->
-                        <a href="/home" class="nav-brand" style="font-family: Lato, Helvetica, sans-serif"> MaranthaFellowship Church</a>
+                        <a href="/home" class="nav-brand" style="font-family: Lato, Helvetica, sans-serif;color:#c92f2f;" onMouseOver="this.style.color='#c92f2f'"
+   onMouseOut="this.style.color='#565656'"> MaranthaFellowship Church</a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -107,7 +108,7 @@
                     <!-- Single Footer Widget -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70">
-                            <a href="#" class="footer-logo"><img src="{{ asset('img/core-img/logo2.png') }}" class="img-thumbnail" alt="" style="width:200px;height:180px;"></a>
+                            <a href="#" class="footer-logo"><img src="{{ asset('img/core-img/logo2.png') }}" class="img-thumbnail" alt="" style="width:180px;height:180px;"></a>
                         </div>
                     </div>
 
@@ -117,11 +118,11 @@
                             <h5 class="widget-title">Quick Link</h5>
                             <nav class="footer-menu">
                                 <ul>
-                                    <li><a href="{{url('/home')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Home</a></li>
-                                    <li><a href="{{url('/sermons')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sermons</a></li>
-                                    <li><a href="{{url('/news')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> News</a></li>
-                                    <li><a href="{{url('/about')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About</a></li>
-                                    <li><a href="{{url('/contact')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact</a></li>
+                                    <li><a href="{{url('/home')}}" style="text-decoration:none;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Home</a></li>
+                                    <li><a href="{{url('/sermons')}}" style="text-decoration:none;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sermons</a></li>
+                                    <li><a href="{{url('/news')}}" style="text-decoration:none;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> News</a></li>
+                                    <li><a href="{{url('/about')}}" style="text-decoration:none;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About</a></li>
+                                    <li><a href="{{url('/contact')}}" style="text-decoration:none;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -155,8 +156,8 @@
                             <div class="contact-information">
                                 <p><i class="fa fa-map-marker" aria-hidden="true"></i> No(101), Yangon Insein Road </p>
                                 <p><i class="fa fa-clock-o" aria-hidden="true"></i> Sunday: 9 AM to 5 PM </p>
-                                <a href="callto:001-1234-88888"><i class="fa fa-phone" aria-hidden="true"></i> +9595045235 </a>
-                                <a href="mailto:info.deercreative@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> maranthafellowshipchurch@gmail.com </a>
+                                <a href="callto:001-1234-88888" style="text-decoration:none;"><i class="fa fa-phone" aria-hidden="true"></i> +9595045235 </a>
+                                <a href="mailto:info.deercreative@gmail.com" style="text-decoration:none;"><i class="fa fa-envelope" aria-hidden="true"></i> maranthafellowshipchurch@gmail.com </a>
                                 <!-- <p><i class="fa fa-clock-o" aria-hidden="true"></i> Opens at Sunday </p> -->
                             </div>
 
@@ -175,21 +176,11 @@
                     <div class="col-12 col-md-6">
                         <div class="copywrite-text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            MaranthafellowshipChurch &copy;<script>document.write(new Date().getFullYear());</script><br> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            MaranthafellowshipChurch &copy;<script>document.write(new Date().getFullYear());</script><br> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style="text-decoration:none;">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                         </div>
                     </div>
-
-                    <!-- Footer Social Icon -->
-                    <!-- <div class="col-12 col-md-6">
-                        <div class="footer-social-icon">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

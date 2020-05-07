@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" style="text-decoration:none;"><i class="fa fa-home"></i>Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Sermons</li>
                         </ol>
                     </nav>
@@ -52,7 +52,7 @@
                                     </p>
                                     <div class="read-more-share d-flex flex-wrap justify-content-between">
                                 <div class="read-more-btn">
-                                    <a href="sermons/{{ $sermon->id }}" style="font-weight: 700;color: #c92f2f;">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                    <a href="sermons/{{ $sermon->id }}" style="font-weight: 700;color: #c92f2f;text-decoration:none;">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                                 </div>

@@ -109,7 +109,7 @@ class CnewsController extends Controller
     }
 
     public function allNews(){
-        $news = Cnew::all();
+        $news = Cnew::orderBy('created_at','desc')->paginate(10);
         return view('allnews',compact('news'));
     }
 }

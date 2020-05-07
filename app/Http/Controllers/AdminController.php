@@ -26,7 +26,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $sermons = Sermon::all();
+        $sermons = Sermon::orderBy('created_at','desc')->paginate(10);
         return view('adminhome',compact('sermons'));
     }
 

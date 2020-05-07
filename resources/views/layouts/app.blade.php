@@ -36,7 +36,7 @@
     @else
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="/receipe" class="logo">
+            <a href="/admin" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Church Admin 
             </a>    

@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/sermons"><i class="fa fa-home"></i>Home</a></li>
+                            <li class="breadcrumb-item"><a href="/sermons" style="text-decoration:none;"><i class="fa fa-home"></i>Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Sermon Details</li>
                         </ol>
                     </nav>
@@ -36,14 +36,14 @@
                                 <div class="catagory-share-meta d-flex flex-wrap justify-content-between align-items-center">
                                     
                                 </div>
-                                <p>{{ $sermon->sermon_text }}</p>
+                                <!-- <p>{{ $sermon->sermon_text }}</p> -->
                                 <blockquote>
                                     <div class="blockquote-text">
-                                        <h6>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.” </h6>
-                                        <h6>Ollie Schneider - <span>Parson</span></h6>
+                                        <h6>“{{ $sermon->sermon_text }}” </h6>
+                                        <h6><span>{{$sermon->pastor_name}}</span></h6>
                                     </div>
                                 </blockquote>
-                                <p>He assignments are fast-paced and our services address client needs for efficiency and flexibility. Our staff is experienced in working with architects, interior design firms, engineers, developers and clients in the public and private sectors.</p>
+                                <!-- <p>He assignments are fast-paced and our services address client needs for efficiency and flexibility. Our staff is experienced in working with architects, interior design firms, engineers, developers and clients in the public and private sectors.</p> -->
                             </div>
                         </div>
                     </div>
